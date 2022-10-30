@@ -26,7 +26,7 @@
 
         <div class="mb-3">
             <label>Lekar</label>
-            <select class="form-select" name="pacijent">
+            <select class="form-select" name="lekar">
                 <?php
 
                 $upit2 = "SELECT lekar_id, ime, prezime, specijalizacija FROM lekar";

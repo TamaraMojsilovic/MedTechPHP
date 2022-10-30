@@ -63,9 +63,33 @@
 
 <script>
     $('#np-h3').on('click', function() {
+        $('#n-pregled-frm').hide()
         $('#n-pacijent-frm').show()
     });
     $('#npregled-h3').on('click', function() {
+        $('#n-pacijent-frm').hide()
         $('#n-pregled-frm').show()
+    });
+
+
+    //Unos novog pregleda
+    $("button[name='unesi_pregled_btn']").click(function(e) {
+
+        e.preventDefault()
+
+        $.ajax({
+            url: 'savePregled.php',
+            method: 'POST',
+            data: {
+                datum: $('input[name=datum]').val(),
+                pacijent: $('select[name=pacijent]').val(),
+                lekar: $('select[name=lekar]').val(),
+            },
+            success: function() {
+                alert('Novi pregled uspešno sačuvan!')
+                $("#n-pregled-frm").trigger('reset')
+            }
+        })
+
     });
 </script>
