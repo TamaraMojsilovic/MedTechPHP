@@ -13,10 +13,6 @@
 
 <body>
 
-    <?php
-    include 'novi_pacijent.php';
-    ?>
-
     <div class="container">
 
         <div class="heading-main">
@@ -36,9 +32,36 @@
             </div>
         </div>
 
+        <?php
+        include 'novi_pacijent.php';
+        include 'pacijent.php';
+
+
+        if (isset($_GET['unesi_pacijenta_btn'])) {
+
+            $pacijent = new Pacijent();
+            $pacijent->ime = $_GET['ime'];
+            $pacijent->prezime = $_GET['prezime'];
+            $pacijent->datum_rodjenja = $_GET['datum_rodjenja'];
+            $pacijent->broj_telefona = $_GET['broj_telefona'];
+            $pacijent->adresa = $_GET['adresa'];
+
+
+            if ($pacijent->unesiPacijenta($pacijent)) {
+                echo "<script type='text/javascript'>alert('Novi pacijent uspešno sačuvan!'); location='index.php'</script>";
+            }
+        }
+        ?>
 
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 </body>
 
 </html>
+
+<script>
+    $('#np-h3').on('click', function() {
+        $('#n-pacijent-frm').show()
+    });
+</script>
