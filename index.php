@@ -28,13 +28,14 @@
                 <h3 id="npregled-h3">Novi pregled</h3>
             </div>
             <div class="svi-pregledi">
-                <h3 id="np-h3">Svi pregledi</h3>
+                <h3 id="sp-h3">Svi pregledi</h3>
             </div>
         </div>
 
         <?php
         include 'novi_pacijent.php';
         include 'novi_pregled.php';
+        include 'svi_pregledi.php';
         include 'pacijent.php';
 
 
@@ -62,13 +63,23 @@
 </html>
 
 <script>
+    //Prikaz forme za novog pacijenta
     $('#np-h3').on('click', function() {
         $('#n-pregled-frm').hide()
+        $('#svi_pregledi_tbl').hide()
         $('#n-pacijent-frm').show()
     });
+    //Prikaz forme za novi pregled
     $('#npregled-h3').on('click', function() {
         $('#n-pacijent-frm').hide()
+        $('#svi_pregledi_tbl').hide()
         $('#n-pregled-frm').show()
+    });
+    //Prikaz svih pregleda
+    $('#sp-h3').on('click', function() {
+        $('#n-pacijent-frm').hide()
+        $('#n-pregled-frm').hide()
+        $('#svi_pregledi_tbl').show()
     });
 
 

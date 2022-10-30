@@ -56,10 +56,24 @@ h1 {
     color: white;
 }
 
+#sp-h3 {
+    padding-left: 6vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    color: white;
+}
+
 #n-pacijent-frm,
 #n-pregled-frm {
     width: 50vh;
     margin-top: 5vh;
     margin-left: 49vh;
+    display: none;
+}
+
+#svi_pregledi_tbl {
+    width: 140vh;
+    margin-top: 5vh;
+    margin-left: 5vh;
     display: none;
 }
