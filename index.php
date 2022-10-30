@@ -13,6 +13,10 @@
 
 <body>
 
+    <?php
+    include 'novi_pacijent.php';
+    ?>
+
     <div class="container">
 
         <div class="heading-main">
