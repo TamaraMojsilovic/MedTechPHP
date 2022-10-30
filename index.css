@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.heading-main{
+    display: flex;
+    margin-top: 5vh;
+    margin-left: 50vh;
+}
+
+h1 {
+    margin-left: 2vh;
+    font-size: 45px;
+}
+
+.novi-pacijent {
+    width: 35vh;
+    margin-top: 5vh;
+    background-color: #3B71CA;
+    margin-left: 12vh;
+}
+
+#np-h3{
+    padding-left: 6vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    color: white;
+}
+
+.main-menu {
+    display: flex;
+}
+
+.novi-pregled {
+    width: 35vh;
+    margin-top: 5vh;
+    background-color: #3B71CA;
+    margin-left: 15vh;
+    padding-left: 2vh;
+}
+
+.svi-pregledi {
+    width: 35vh;
+    margin-top: 5vh;
+    padding-left: 2vh;
+    background-color: #3B71CA;
+    margin-left: 15vh;
+}
