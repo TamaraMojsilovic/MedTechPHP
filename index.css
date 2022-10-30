@@ -49,9 +49,17 @@ h1 {
     margin-left: 15vh;
 }
 
-#n-pacijent-frm {
+#npregled-h3 {
+    padding-left: 5vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    color: white;
+}
+
+#n-pacijent-frm,
+#n-pregled-frm {
     width: 50vh;
     margin-top: 5vh;
-    margin-left: 48vh;
+    margin-left: 49vh;
     display: none;
 }

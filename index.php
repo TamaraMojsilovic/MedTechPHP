@@ -25,7 +25,7 @@
                 <h3 id="np-h3">Novi pacijent</h3>
             </div>
             <div class="novi-pregled">
-                <h3 id="np-h3">Novi pregled</h3>
+                <h3 id="npregled-h3">Novi pregled</h3>
             </div>
             <div class="svi-pregledi">
                 <h3 id="np-h3">Svi pregledi</h3>
@@ -34,6 +34,7 @@
 
         <?php
         include 'novi_pacijent.php';
+        include 'novi_pregled.php';
         include 'pacijent.php';
 
 
@@ -63,5 +64,8 @@
 <script>
     $('#np-h3').on('click', function() {
         $('#n-pacijent-frm').show()
+    });
+    $('#npregled-h3').on('click', function() {
+        $('#n-pregled-frm').show()
     });
 </script>
