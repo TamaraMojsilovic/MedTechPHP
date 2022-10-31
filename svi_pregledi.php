@@ -7,6 +7,7 @@
                     <th class="text-center">Datum</th>
                     <th class="text-center">Pacijent</th>
                     <th class="text-center">Lekar</th>
+                    <th class="text-center"></th>
                 </tr>
             </thead>
 
@@ -28,6 +29,9 @@
                         <td><?php echo $p['datum'] ?></td>
                         <td><?php echo $p['pime'] . " " . $p['pprez'] ?></td>
                         <td><?php echo $p['lime'] . " " . $p['lprez'] ?></td>
+                        <td>
+                            <button class="btn btn-primary" name="izmeni_btn" value="<?php echo $p['pregled_id'] ?>">Izmeni</button>
+                        </td>
                     </tr>
 
                 <?php endwhile; ?>

@@ -108,4 +108,31 @@
         })
 
     });
+
+
+
+    //Izmena pregleda
+    $("button[name='izmeni_btn']").click(function(e) {
+
+        e.preventDefault()
+
+        $('#svi_pregledi_tbl').hide()
+        $('#n-pregled-frm').show()
+
+        $.ajax({
+            url: 'izmenaPregleda.php',
+            method: 'POST',
+            data: {
+                ID: $(this).val(),
+            },
+            dataType: 'JSON',
+
+            success: function(data) {
+                $("input[name='datum']").val(data.datum)
+                $("select[name='pacijent']").val(data.pacijent_id)
+                $("select[name='lekar']").val(data.lekar_id)
+            }
+        })
+
+    });
 </script>
