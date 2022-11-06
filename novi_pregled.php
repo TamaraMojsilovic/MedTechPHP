@@ -44,4 +44,5 @@
 
 
         <button type="submit" name="unesi_pregled_btn" class="btn btn-primary">Unesi pregled</button>
+        <button type="submit" name="azuriraj_pregled_btn" class="btn btn-primary" style="display: none;">Ažuriraj pregled</button>
     </form>

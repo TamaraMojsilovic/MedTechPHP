@@ -119,6 +119,13 @@
         $('#svi_pregledi_tbl').hide()
         $('#n-pregled-frm').show()
 
+        //Hide dugme za unos, show dugme za ažuriranje
+        $("button[name='unesi_pregled_btn']").hide()
+        $("button[name='azuriraj_pregled_btn']").show()
+
+        //Postavljanje id-a pregleda u dugme za azuriranje
+        $("button[name='azuriraj_pregled_btn']").val($(this).val())
+
         $.ajax({
             url: 'izmenaPregleda.php',
             method: 'POST',
@@ -131,6 +138,29 @@
                 $("input[name='datum']").val(data.datum)
                 $("select[name='pacijent']").val(data.pacijent_id)
                 $("select[name='lekar']").val(data.lekar_id)
+            }
+        })
+
+    });
+
+
+    //Ažuriranje izvršenog pregleda
+    $("button[name='azuriraj_pregled_btn']").click(function(e) {
+
+        e.preventDefault()
+
+        $.ajax({
+            url: 'azuriranjePregleda.php',
+            method: 'POST',
+            data: {
+                ID: $(this).val(),
+                datum: $("input[name='datum']").val(),
+                pacijent_id: $("select[name='pacijent']").val(),
+                lekar_id: $("select[name='lekar']").val()
+            },
+
+            success: function() {
+                alert('Pregled uspešno ažuriran!')
             }
         })
 
