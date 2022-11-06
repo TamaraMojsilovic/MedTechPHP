@@ -31,6 +31,7 @@
                         <td><?php echo $p['lime'] . " " . $p['lprez'] ?></td>
                         <td>
                             <button class="btn btn-primary" name="izmeni_btn" value="<?php echo $p['pregled_id'] ?>">Izmeni</button>
+                            <button class="btn btn-primary" name="obrisi_btn" value="<?php echo $p['pregled_id'] ?>">Obriši</button>
                         </td>
                     </tr>
 

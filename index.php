@@ -161,6 +161,28 @@
 
             success: function() {
                 alert('Pregled uspešno ažuriran!')
+                location = 'index.php'
+            }
+        })
+
+    });
+
+
+
+    //Brisanje izvršenog pregleda
+    $("button[name='obrisi_btn']").click(function(e) {
+
+        alert($(this).val())
+
+        $.ajax({
+            url: 'obrisiPregled.php',
+            method: 'POST',
+            data: {
+                ID: $(this).val(),
+            },
+
+            success: function() {
+                alert('Pregled uspešno obrisan!')
             }
         })
 
